@@ -355,5 +355,12 @@
       "__v": 0
     }
   ],
-  "users": []
+  "users": [
+    {
+      "email": "yagnesh.modh@gmail.com",
+      "password": "$2a$10$Vx1IG8IsCMljsvK0x09Cju.CTgERQTDQWkXpBFcKyEE88BwBwUlyq",
+      "name": "yagnesh modh",
+      "id": 1
+    }
+  ]
 }

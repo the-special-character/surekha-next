@@ -1,6 +1,7 @@
 "use client";
 
 import CustomForm from "@/components/form/customForm";
+import { signIn } from "next-auth/react";
 import FormInput from "@/components/form/input";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -39,36 +40,14 @@ const fields = [
       },
     },
   },
-  {
-    field: "select",
-    name: "contry",
-    label: "Contry",
-    type: "contry",
-    placeholder: "Please Select Country",
-    options: [
-      {
-        value: "india",
-        text: "India",
-      },
-      {
-        value: "us",
-        text: "US",
-      },
-    ],
-    defaultValue: "",
-    rules: {
-      required: {
-        value: true,
-        message: "password is required",
-      },
-    },
-    className: "col-span-full",
-  },
 ];
 
 const Login = () => {
   const login = (values) => {
-    console.log(values);
+    signIn("strapi-credentials", {
+      email: values.email,
+      password: values.password,
+    });
   };
 
   return (
